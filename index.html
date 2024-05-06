@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+
+<html lang="en-uk">
+
+<head>
+    <!--Head is used to contain key information that will throught the whole page-->
+    <TITLE></TITLE>
+    <!--This is the title of the page-->
+
+
+    <meta http-equiv="Content-Type"    content="text/html; charset=UTF-8">
+    <meta name="authors" lang="en-us"  content="Daniel McGlinchey">
+    <!-- This where the authors name is documneted-->
+    <meta name="description"  content="">
+    <!-- This is the description of the site-->
+    <meta name="keywords" lang="en-us"
+          content="">
+    <!-- These are key words that will appear through the site-->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stlform.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<header>
+    <section>
+        <div class="topnav" id="myTopnav"><!-- Navigation bar for navigating getting around the site-->
+            <img class="logo" src="image/logo1w.png" alt="valid"/>
+            <a href="login.html">Login</a>
+            <a href="contact.html">Contact</a>
+            <a href="service.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction4()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <script>
+            function myFunction4() { <!-- Script to make the navigation bar responsive, changing to a vertical display on mobile devices -->
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+
+    </section>
+
+    <section>
+        <div class="slideshow-container">
+            <img class="mySlides" src="image/huskey.png" alt="valid"/> <!--slide buttons to switch between images-->
+            <img class="mySlides" src="image/dog1.png" alt="valid"/>
+            <img class="mySlides" src="image/smwalks.png" alt="valid"/>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <!-- Previous button-->
+            <a class="next" onclick="plusSlides(1)">&#10095;</a> <!-- Next button-->
+        </div>
+
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span> <!--Dot button to switch between images-->
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <script>
+            var slideIndex = 1;<!--Script for the slide images-->
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
+    </section>
+</header>
+
+
+<main border="0" cellspacing="0" cellpadding="20" bgcolor="#2a8e9d" margin-left="10">
+    <A HREF="login.html"><h1 class="bs">Book Service</h1></A>
+</main>
+
+<div class="str">
+    <div class="serv">
+        <div class="card1">
+            <p><img id="ser_img" src="image/night.png" alt="valid"/></p>
+            <h3>Dog Boarding</h3>
+            <p>Care for Dogs overnight</p>
+        </div>
+    </div>
+
+    <div class="serv">
+        <div class="card1">
+            <p> <img class="ser_img" src="image/house.png" alt="valid"/></p>
+            <h3>House Sitting</h3>
+            <p>Carers looking after pets overnight at owners home </p>
+        </div>
+    </div>
+
+    <div class="serv">
+        <div class="card1">
+            <p> <img class="ser_img" src="image/shop.png" alt="valid"/></p>
+            <h3>Dog day care</h3>
+            <p>Daytime care for pets</p>
+        </div>
+    </div>
+
+    <div class="serv">
+        <div class="card1">
+            <p><img class="ser_img"src="image/walk.png" alt="valid"/></p>
+            <h3>Dog walking</h3>
+            <p>Providing walks for dogs individually and in a group</p>
+        </div>
+    </div>
+</div>
+<!-- About Card -->
+<div class="article"><h4>Article</h4></div>
+<div class="index">
+    <div class="text"><!-- Image-->
+        <p><img src="image/dog11.png" alt="valid" class="dog">The goal is to cater to canine care, for dogs while owners <!-- Content-->
+            are at work or on long trips. After having bad experiences with past dog kennel, having our dogs return home
+            scared and even one occasion with flees. We want to create a company dogs feel safe and allows cus-tomers to
+            feel confident in sending them. Providing service that best meet you and help you take care of your furry companion.
+        </p>
+    </div>
+</div>
+
+
+<hr>
+
+<!-- About Card -->
+<div class="index1">
+    <div class="str">
+        <div class="serv">
+            <div class="content">
+                <p><img src="image/penny.png" alt="valid" class="dog1"></p>
+                <div class="text">
+                    <h3>Exercise </h3>
+                    <p>Like human dogs need exercise to burn calories, stimulate their mind to stay healthy.
+                        Exercise can vary depending on the dog’s breed, sex, age and level of health. Small
+                        dogs may only require 1 to 2 walks a day while larger or working dogs would require
+                        significant more and for longer durations. Different types of dogs have different
+                        exercise requirements to maintain their optimal health. It is essential for a veterinarian
+                        and owner to understand the dog-related characteristics of exercise. Understanding
+                        the dog will allow them to understand the dog’s behaviour toward exercise, allowing a
+                        strategy to implemented to prevent obesity. Furthermore, encouraging regular exercise
+                        helps to improve the health of the dog.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div class="serv">
+            <div class="content">
+                <p> <img src="image/board.png" alt="valid" class="dog1"></p>
+                <div class="text">
+                    <h3>Diet</h3>
+                    <p>A dog’s diet is important, good diets allows the animal stray fit and healthy.
+                        Over or under feeding can cause health problems and prevent the animal form
+                        being so active. Balanced diets help to maintain cells, growth and overall health.
+                        Food pacifically made for dog is high-quality and contains nutrients they need.
+                        These meals can differ depending on the dogs age, once a dog starts eating it will
+                        require four meals a day up until it of 12 weeks. The amount of meal will keep
+                        shrinking up until the dog has reach it first birthday where it will receive one
+                        meal a day. The portions size will differ on the size of the dog and breed, working
+                        dogs require large portion size, as they are constantly moving. Premium -quality dry
+                        food provides a well-balanced diet for adult dogs, providing vitamins and nutrients
+                        they may need. Theses dish would need water or canned food to allow enough water into their diet.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="serv">
+            <div class="content">
+                <p> <img src="image/tom.png" alt="valid" class="dog1"></p>
+                <div class="text">
+                    <h3>Medical</h3>
+                    <p>Dogs should receive regular medical care, as a human would.
+                        Veterinarians provide information on keep animals healthy and provide a
+                        vaccination schedule, deworming and external parasites. A veterinary is
+                        there to keep an animal safe and healthy, providing the owner with further
+                        information. When attending business as day care they may request that all
+                        dogs have been neutered before attending. The operation would take place at a vet.
+                        Usually while the dog is young, once they are between 6 to 9 months old, depending on
+                        the breed and gender. Dog’s should not be given any medication that hasn’t been prescribed
+                        by a veterinarian. This may not include dental products that can be purchased in store,
+                        as they provide nutarians. Unprescribed medicine could cause more harm to the animal
+                        and give it unknown side effects.
+                    </p>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+
+
+<div class="follow"><h4>Follow us on:</h4></div>
+<div class="social_box">
+    <A HREF=""><img src="image/facebook.png" class = "icons" alt="valid"/></A><!-- Social media links-->
+    <A HREF=""><img src="image/instagram.png" class = "icons" alt="valid"/></A>
+    <A HREF=""><img src="image/twitter.png" class = "icons" alt="valid"/></A>
+</div>
+
+
+<style></style>
+</body>
+<footer>
+    <!--the footer contains closing information the conclude the page-->
+
+    <aside class="top">
+        <A HREF="index.html"><img src="image/logo.png" alt="valid"/></A>
+    </aside>
+    <div class="links">
+        <a href="index.html">Home</a><!-- Navigation bar-->
+        <a href="about.html">About</a>
+        <a href="service.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+    </div>
+    <div class="creator">
+        <p>Created by Daniel McGlinchey</p>
+    </div>
+</footer>
+</html>

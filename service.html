@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+
+<html lang="en-uk">
+
+<head>
+    <!--Head is used to contain key information that will throught the whole page-->
+    <TITLE></TITLE>
+    <!--This is the title of the page-->
+
+
+    <meta http-equiv="Content-Type"    content="text/html; charset=UTF-8">
+    <meta name="authors" lang="en-us"  content="Daniel McGlinchey">
+    <!-- This where the authors name is documneted-->
+    <meta name="description"  content="">
+    <!-- This is the description of the site-->
+    <meta name="keywords" lang="en-us"
+          content="">
+    <!-- These are key words that will appear through the site-->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stlform.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<header>
+    <section>
+        <div class="topnav" id="myTopnav"><!-- Navigation bar for navigating getting around the site-->
+            <img class="logo" src="image/logo1w.png" alt="valid"/>
+            <a href="login.html">Login</a>
+            <a href="contact.html">Contact</a>
+            <a href="service.html" class="active">Services</a>
+            <a href="about.html" >About</a>
+            <a href="index.html" >Home</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction4()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <script>
+            function myFunction4() {<!-- Script to make the navigation bar responsive, changing to a vertical display on mobile devices -->
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+
+    </section>
+
+    <section>
+        <div class="slideshow-container">
+            <img class="mySlides" src="image/huskey.png" alt="valid"/><!--slide buttons to switch between images-->
+            <img class="mySlides" src="image/dog1.png" alt="valid"/>
+            <img class="mySlides" src="image/smwalks.png" alt="valid"/>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a><!-- Previous button-->
+            <a class="next" onclick="plusSlides(1)">&#10095;</a><!-- Next button-->
+        </div>
+
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span><!--Dot button to switch between images-->
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <script>
+            var slideIndex = 1;<!--Script for the slide images-->
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
+    </section>
+</header>
+<body>
+
+<div class="row">
+    <div class="side">
+        <h2>Services</h2>
+        <img src="image/pc.jpg" alt="valid" class="dog"><!--Image-->
+        <p>We are now available across serval social media platforms, as: Facebook, twitter and Instagram.<!--Content-->
+            Giving daily updates of our community and the services. Hope for you to follow us and share
+            some of your experience with us. </p>
+        <h3>Social media platforms:</h3>
+        <div class="fakeimg" style="height:60px;">Facebook</div><br>
+        <div class="fakeimg" style="height:60px;">Instagram</div><br>
+        <div class="fakeimg" style="height:60px;">Twitter</div>
+    </div>
+    <div class="main">
+        <h5>Dog walking</h5>
+        <div class="fakeimg" style="height:15px;"></div>
+        <br>
+        <p><img src="image/Dwalking.jpg" alt="valid" class="dog">Dog walking sessions are available every day between the hours of 7am to 7pm.
+            These sessions can be single dog walks or as a group. Price will differ depending
+            on the session and the dog breed. Walks will be done to best meet the dog needs,
+            these walks will differ depending on the dogs breed, age and gender. Single walks
+            are highly demanded can fill up quickly, we advise dog walk in group as it creates
+            a happier environment for them. Dogs who walk in group need evidence that the animal
+            has been neutered and get along with other dogs. (Service may not be available over
+            holidays as Christmas and Easter)</p>
+        <button class="btn1"><A HREF="login.html">Book</A></button>
+        <br>
+        <br>
+        <h5>House sitting</h5>
+        <div class="fakeimg" style="height:15px;"></div>
+        <br>
+        <p><img src="image/dhouse.jpg" alt="valid" class="dog">House sitting sessions are available every day, at an hourly time ranges between
+            1 to 12 hours, further time can be discussed before appointment. Price will differ
+            depending on the number of hours spent with the dog. These sessions are when member
+            of staff come around to your house and look after your pet. Session as these can be
+            useful for anxious who don’t like being in new environment, may prove useful for dog
+            who don’t do well with others. (Service may not be available over holidays as Christmas and Easter)
+        </p>
+        <button class="btn1"><A HREF="login.html">Book</A></button>
+        <br>
+        <br>
+        <h5>Day Care</h5>
+        <div class="fakeimg" style="height:15px;"></div>
+        <br>
+        <p><img src="image/dog_day_care.jpg" alt="valid" class="dog">Day care sessions are available everyday between the hours of 7am to 7pm. These sessions
+            will require a dog to behave around others, including dogs and staff. Dog will also be
+            required to be neutered, as dogs will be interacting with one another. In day care, dog
+            will be entertained and taken for walks, dogs may also be feed if owners request it.
+            Currently there is no option for care to individual dogs. This service may not prove
+            useful for dog who are anxious and struggle to be away from their owner. Future hope
+            to allow single session care for dogs, this will help with anxious dogs and unneutered dogs.</p>
+        <button class="btn1"><A HREF="login.html">Book</A></button>
+        <br>
+        <br>
+        <h5>Dog board</h5>
+        <div class="fakeimg" style="height:15px;"></div>
+        <br>
+        <p><img src="image/holiday.jpg" alt="valid" class="dog">Dog boarding are sessions that take place over night. Useful for owner who are heading on holiday
+            or require last minute care. Care is between 1 to 7-night, further stay can be done on request.
+            Boarding session will provide a bed, food and walk if need be. Dogs that are stay for multiple day
+            will receive that same treatment as dog day-care sessions. Dog will also be required to be neutered,
+            as dogs will be interacting with others. Currently there is no option for care to individual dog.
+            This service may not prove useful for dog who are anxious and struggle to be away from their owner.
+            Future hope to allow single session care for dogs, this will help with anxious dogs and unneutered dogs.</p>
+        <button class="btn1"><A HREF="login.html">Book</A></button>
+    </div>
+</div>
+
+</body>
+
+<div class="follow"><h4>Follow us on:</h4></div>
+<div class="social_box">
+    <A HREF=""><img src="image/facebook.png" class = "icons" alt="valid"/></A><!-- Social media links-->
+    <A HREF=""><img src="image/instagram.png" class = "icons" alt="valid"/></A>
+    <A HREF=""><img src="image/twitter.png" class = "icons" alt="valid"/></A>
+</div>
+
+
+<style></style>
+</body>
+<footer>
+    <!--the footer contains closing information the conclude the page-->
+
+    <aside class="top">
+        <A HREF="service.html"><img src="image/logo.png" alt="valid"/></A>
+    </aside>
+    <div class="links">
+        <a href="index.html">Home</a><!-- Navigation bar-->
+        <a href="about.html">About</a>
+        <a href="service.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+    </div>
+    <div class="creator">
+        <p>Created by Daniel McGlinchey</p>
+    </div>
+</footer>
+</html>
